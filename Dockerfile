@@ -70,6 +70,15 @@ ENV BUILDLOGS=/tmp/buildlogs
 RUN sudo apt-get clean \
     && sudo rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
+
+COPY Tools /ardupilot/Tools/
+COPY libraries /ardupilot/libraries/
+COPY modules /ardupilot/modules/
+COPY ArduCopter /ardupilot/ArduCopter/
+COPY waf waf
+COPY wscript wscript
+COPY .git .git
+
 ENV CCACHE_MAXSIZE=1G
 ENTRYPOINT ["/ardupilot_entrypoint.sh"]
 CMD ["bash"]
