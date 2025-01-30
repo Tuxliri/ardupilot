@@ -6,3 +6,4 @@ ARMING_CHECK 0
 # `SET_ATTITUDE_TARGET mavlink message 
 # thrust field commands thrust directly rather than climb rate 
 GUID_OPTIONS 8
+MOT_HOVER_LEARN 0
