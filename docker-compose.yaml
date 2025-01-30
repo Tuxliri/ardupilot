@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  arducopter:
+    image: duckietown/arducopter:latest
+    container_name: arducopter_sim
+    network_mode: "host"
+    volumes:
+      - ardupilot:/ardupilot
+    command: >
+      Tools/autotest/sim_vehicle.py -v ArduCopter -f gazebo-iris --model JSON --map --console --add-param-file=./Tools/autotest/default_params/duckiedrone.parm --out=127.0.0.1:14551
+    stdin_open: true
+    tty: true
+    restart: unless-stopped
+
+volumes:
+  ardupilot:
