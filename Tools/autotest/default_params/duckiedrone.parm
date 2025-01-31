@@ -3,7 +3,8 @@ SIM_GPS1_TYPE 0
 SIM_GPS2_ENABLE 0
 ARMING_CHECK 0
 
-# `SET_ATTITUDE_TARGET mavlink message 
+# `SET_ATTITUDE_TARGET` mavlink message 
 # thrust field commands thrust directly rather than climb rate 
 GUID_OPTIONS 8
 MOT_HOVER_LEARN 0
+SYSID_MYGCS 1
